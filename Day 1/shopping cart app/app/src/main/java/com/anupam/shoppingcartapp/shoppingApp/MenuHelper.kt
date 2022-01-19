@@ -1,4 +1,4 @@
-package com.anupam.shoppingcartapp
+package com.anupam.shoppingcartapp.shoppingApp
 
 import kotlin.system.exitProcess
 

@@ -1,4 +1,4 @@
-package com.anupam.shoppingcartapp
+package com.anupam.shoppingcartapp.shoppingApp
 
 fun main() {
     val  helper = MenuHelper()
