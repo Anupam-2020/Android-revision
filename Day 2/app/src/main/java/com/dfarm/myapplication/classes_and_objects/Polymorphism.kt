@@ -2,6 +2,10 @@ package com.dfarm.myapplication.classes_and_objects
 
 
 // Parent class can hold a reference to its child class and calls methods of the child classes.
+// Helps to write maintainable and extensible codes.
+// Helps in interacting with objects via common interface.
+
+
 open class Shape {
     open fun area(): Double {
         return 0.0
