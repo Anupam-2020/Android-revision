@@ -1,10 +1,7 @@
-package com.anupam.kotlin_training.basics.practice_sets
+package com.dfarm.myapplication.practice_sets
 
-import android.system.Os.*
-import java.net.Inet4Address
 import java.util.*
 import kotlin.collections.ArrayList
-import kotlin.random.Random.Default.nextInt
 
 private fun q1(a: Array<Int>, b: Array<Int>)  = a + b
 
@@ -32,7 +29,7 @@ open class Bank(
     }
 }
 
-class AbcBank(txnDls: Int, val ifsc: String, add: String, id: Int):Bank(ifsc,add,id) {
+class AbcBank(txnDls: Int, val ifsc: String, add: String, id: Int): Bank(ifsc,add,id) {
     fun reverseTransac() {
         println("Performing reverse transction.")
     }
