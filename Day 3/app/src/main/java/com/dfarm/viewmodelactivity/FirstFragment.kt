@@ -37,17 +37,17 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         fragmentViewModel = ViewModelProvider(this)[FragmentViewModel::class.java]
-//        binding.buttonFirst.setOnClickListener {
-//            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-//        }
+        binding.buttonFirst.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        }
 
 
         val viewModel: FragmentViewModel by activityViewModels()
         binding.vm = viewModel
         binding.lifecycleOwner = this
-        viewModel.prg.observe(viewLifecycleOwner) {
-            Log.i("seek", it)
-        }
+//        viewModel.prg.observe(viewLifecycleOwner) {
+//            Log.i("seek", it)
+//        }
     }
 
     override fun onDestroyView() {
