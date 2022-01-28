@@ -9,6 +9,7 @@ import androidx.room.Room
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.util.*
 import kotlin.math.absoluteValue
 
 class MainActivity : AppCompatActivity() {
@@ -20,11 +21,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // The below one is not a good practice.
-        database = Room.databaseBuilder(applicationContext, ContactDatabase::class.java, "contactDB").build()
+//        database = Room.databaseBuilder(applicationContext, ContactDatabase::class.java, "contactDB").build()
 
+        database = ContactDatabase.getDatabase(this)
 
         CoroutineScope(Dispatchers.IO).launch {
-            database.contactDao().insertContact(Contact(0,"Anupam","67898787"))
+            database.contactDao().insertContact(Contact(0,"Anupam","67898787",Date(), Date().toString(),1))
 
         }
 
