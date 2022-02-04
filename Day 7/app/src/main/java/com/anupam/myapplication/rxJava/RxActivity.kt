@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.anupam.myapplication.R
+import io.reactivex.rxjava3.schedulers.Schedulers
+import java.util.concurrent.Executor
 
 class RxActivity : AppCompatActivity() {
 
@@ -83,11 +85,14 @@ class RxActivity : AppCompatActivity() {
 
 
         lastOperator()
-//            .last(User(4,"Anurag",20))
+            .last(User(4,"Anurag",20))
 //            .lastElement()
 //            .lastOrError()
+            .subscribeOn(Schedulers.computation())
+//            .observeOn(Schedulers.io())
             .subscribe({
                 Log.i(TAG,"onNext $it")
+                Log.i(TAG,Thread.currentThread().name)
             },{
                 Log.i(TAG,"onError $it")
             })
