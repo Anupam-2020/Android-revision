@@ -3,6 +3,7 @@ package com.dfarm.viewmodelactivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
+
 class FragmentViewModel: ViewModel() {
 
     val prg: MutableLiveData<String> = MutableLiveData("0")
@@ -10,4 +11,5 @@ class FragmentViewModel: ViewModel() {
     fun onPrgCh(pr: Int) {
         prg.value = "$pr"
     }
+
 }

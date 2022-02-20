@@ -2,10 +2,10 @@ package com.dfarm.viewmodelactivity
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.dfarm.viewmodelactivity.databinding.FragmentSecondBinding
 import kotlinx.coroutines.*
@@ -56,23 +56,32 @@ class SecondFragment : Fragment() {
             }
             CoroutineScope(Dispatchers.IO).launch {
                 task2()
+                task3()
             }
+
         }
     }
 
-    suspend fun task1() {
+    private suspend fun task3() {
+        val job = CoroutineScope(Dispatchers.IO).async {
+            task1()
+        }
+        Log.i("TAG", job.await().toString())
+    }
+
+    private suspend fun task1() {
         Log.i("TAG","STARTING TASK 1")
         delay(2000)
         Log.i("TAG","ENDING TASK 1")
     }
 
-    suspend fun task2() {
+    private suspend fun task2() {
         Log.i("TAG","STARTING TASK 2")
         delay(2000)
         Log.i("TAG","ENDING TASK 2")
     }
 
-    fun executeLongRunning() {
+    private fun executeLongRunning() {
         for (i in 1..1000000000L) {
 
         }
