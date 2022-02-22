@@ -8,7 +8,7 @@ class MainActivityPresenter(view: PackageInterfaces.DataView): PackageInterfaces
     private var view: PackageInterfaces.DataView = view
     private var model: PackageInterfaces.DataModel = MainActivityModel()
 
-    init {
+    init {  // first of all view will be initialized.
         view.initView()
     }
 
