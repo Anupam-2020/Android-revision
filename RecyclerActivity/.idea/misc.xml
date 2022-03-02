@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../.gradle/caches/transforms-3/fa673d1685893c1189b9e94560a94772/transformed/appcompat-1.4.1/res/layout/support_simple_spinner_dropdown_item.xml" value="0.18072916666666666" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.35104166666666664" />
+        <entry key="app/src/main/res/layout/fragment_list_view.xml" value="0.35104166666666664" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.35104166666666664" />
         <entry key="app/src/main/res/layout/recycler_item.xml" value="0.35104166666666664" />
       </map>

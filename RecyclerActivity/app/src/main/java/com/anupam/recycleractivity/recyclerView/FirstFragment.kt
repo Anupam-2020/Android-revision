@@ -9,7 +9,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.anupam.recycleractivity.R
 import com.anupam.recycleractivity.RecyclerAdapter
-import com.anupam.recycleractivity.data
 import com.anupam.recycleractivity.databinding.FragmentFirstBinding
 
 /**
